@@ -1,0 +1,20 @@
+﻿@page "/"
+@using Projekt.Shared
+
+@foreach(Prj p in Projekti)
+{
+	<ProjektP Ja="p"/>	
+}
+
+@code
+{
+	private List<Prj> Projekti = new List<Prj>();
+
+	protected override void OnInitialized()
+	{
+		Projekti.Add(new Prj { Bla = "asd", BlaBla = "qwe" });
+		Projekti.Add(new Prj { Bla = "123", BlaBla = "zxc" });
+		Projekti.Add(new Prj { Bla = "34234", BlaBla = "ssgsdg" });
+		Projekti.Add(new Prj { Bla = "43gg", BlaBla = "sdgsgsdg" });
+	}
+}
